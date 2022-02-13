@@ -10,6 +10,7 @@ func main() {
 		execute the function twice , sequentially
 		with arguments "chris" and "tasia"
 	*/
+	fmt.Printf("Sequential execution of the function\n")
 	count("chris")
 	count("tasia")
 	/*
@@ -17,6 +18,9 @@ func main() {
 			first time as goroutine, argument "chris"
 			second time not as goroutine, argument "tasia"
 	*/
+	fmt.Printf("Concurrent execution of the function\n")
+	go count("chris")
+	count("tasia")
 }
 
 /*
